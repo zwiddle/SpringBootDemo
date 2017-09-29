@@ -35,6 +35,11 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.3.0</version>
         </dependency>
+<dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -105,6 +110,20 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+	<plugin> 
+        <groupId>org.apache.tomcat.maven</groupId> 
+        <artifactId>tomcat7-maven-plugin</artifactId> 
+        <version>2.2</version> 
+        <configuration> 
+        <server>tomcat-development-server</server> 
+        <url>http://144.38.196.18:8080/manager/text</url> 
+        <warFile>target\demo.war</warFile> 
+        <path>/demo</path> 
+        <username>joe</username>
+        <password>1francom$</password>
+        </configuration> 
+        </plugin> 
+
         </plugins>
     </build>
 
